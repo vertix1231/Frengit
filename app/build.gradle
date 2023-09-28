@@ -15,7 +15,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField "String", "TOKEN", '"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"'
+        buildConfigField "String", "TOKEN", '"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"'
     }
 
     buildTypes {

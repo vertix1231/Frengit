@@ -24,7 +24,7 @@ class MainViewModel : ViewModel() {
 
     fun findGitUser(search: String) {
         _isLoading.postValue(true)
-        val client = ApiConfig.getApiService().getUserbyusername("${search}")
+        val client = ApiConfig.getApiService().getUserbyusername(search)
         client.enqueue(object : Callback<User> {
             override fun onResponse(call: Call<User>, response: Response<User>) {
                 _isLoading.postValue(false)
