@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">FrenGit</string>
+    <string name="labdetail">labdetail</string>
+    <string name="labname">labname</string>
+    <string name="about">about</string>
+    <string name="search">search</string>
+    <string name="cari_user">Cari User</string>
+    <string name="name">name</string>
+    <string name="username">username</string>
+    <string name="location">location</string>
+    <string name="company">company</string>
+    <string name="repo">repo</string>
+
+    <string name="follower_tab_text_1">Follower</string>
+    <string name="following_tab_text_2">Following</string>
+    <string name="tab_text_3">Setting</string>
+    <string name="content_tab_home">Welcome Home</string>
+    <string name="content_tab_following">Change your Following here</string>
+    <string name="content_tab_follower">Change your Follower here</string>
+    <string name="content_tab_text">This is Tab %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
