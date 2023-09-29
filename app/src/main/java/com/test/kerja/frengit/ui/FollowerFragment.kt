@@ -8,10 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.test.kerja.frengit.R
-import com.test.kerja.frengit.data.response.ItemsItem
 import com.test.kerja.frengit.data.response.TabUserDetail
-import com.test.kerja.frengit.data.response.UserDetail
 import com.test.kerja.frengit.databinding.FragmentFollowerBinding
 
 class FollowerFragment : Fragment() {
@@ -45,7 +42,6 @@ class FollowerFragment : Fragment() {
         binding.rvFollower.setHasFixedSize(true)
         val itemDecoration = DividerItemDecoration(requireContext(), layoutManager.orientation)
         binding.rvFollower.addItemDecoration(itemDecoration)
-//        setUserFollower(rc)
     }
     private fun setUserFollower(rc: List<TabUserDetail>?) {
         val adapter = TabDetailAdapter()

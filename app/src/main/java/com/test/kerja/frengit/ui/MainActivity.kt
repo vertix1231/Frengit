@@ -19,12 +19,13 @@ class MainActivity : AppCompatActivity() {
 
     private val mainViewModel by viewModels<MainViewModel>()
     private val detailMainViewModel by viewModels<DetailMainViewModel>()
+
+    //    val adapter = GithubAdapter()
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         showListRv()
         mainViewModel.Gituser.observe(this) {
             setSearchUserId(it)
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
     private fun showListRv() {
         val layoutManager = LinearLayoutManager(this)
         binding.rvGituser.layoutManager = layoutManager
+        binding.rvGituser.setHasFixedSize(true)
         val itemDecoration = DividerItemDecoration(this, layoutManager.orientation)
         binding.rvGituser.addItemDecoration(itemDecoration)
     }

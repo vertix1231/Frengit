@@ -4,7 +4,6 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.google.android.material.tabs.TabLayout.Tab
 import com.test.kerja.frengit.data.response.TabUserDetail
 import com.test.kerja.frengit.data.response.UserDetail
 import com.test.kerja.frengit.data.retrofit.ApiConfig
