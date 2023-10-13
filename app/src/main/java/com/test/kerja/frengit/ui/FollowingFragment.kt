@@ -8,8 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.test.kerja.frengit.data.response.TabUserDetail
+import com.test.kerja.frengit.adapter.TabDetailAdapter
+import com.test.kerja.frengit.model.TabUserDetail
 import com.test.kerja.frengit.databinding.FragmentFollowingBinding
+import com.test.kerja.frengit.viewmodel.DetailMainViewModel
 
 class FollowingFragment : Fragment() {
     private var _binding: FragmentFollowingBinding? = null

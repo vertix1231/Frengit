@@ -3,6 +3,7 @@ package com.test.kerja.frengit.ui
 import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -12,8 +13,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.test.kerja.frengit.R
-import com.test.kerja.frengit.data.response.ItemsItem
+import com.test.kerja.frengit.adapter.GithubAdapter
+import com.test.kerja.frengit.model.ItemsItem
 import com.test.kerja.frengit.databinding.ActivityMainBinding
+import com.test.kerja.frengit.viewmodel.DetailMainViewModel
+import com.test.kerja.frengit.viewmodel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,8 +30,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        Log.i("MainActivityLog", "masuk main activity onceate")
         showListRv()
         mainViewModel.Gituser.observe(this) {
+            Log.i("MainActivityLog", "masuk main activity onceate main view model")
             setSearchUserId(it)
         }
         mainViewModel.isLoading.observe(this) {

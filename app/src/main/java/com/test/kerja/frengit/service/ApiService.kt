@@ -1,9 +1,9 @@
-package com.test.kerja.frengit.data.retrofit
+package com.test.kerja.frengit.service
 
 import com.test.kerja.frengit.BuildConfig
-import com.test.kerja.frengit.data.response.TabUserDetail
-import com.test.kerja.frengit.data.response.User
-import com.test.kerja.frengit.data.response.UserDetail
+import com.test.kerja.frengit.model.TabUserDetail
+import com.test.kerja.frengit.model.User
+import com.test.kerja.frengit.model.UserDetail
 import retrofit2.Call
 import retrofit2.http.*
 

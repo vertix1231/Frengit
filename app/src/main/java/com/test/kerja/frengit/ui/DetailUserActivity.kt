@@ -10,9 +10,11 @@ import com.bumptech.glide.Glide
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.test.kerja.frengit.R
-import com.test.kerja.frengit.data.response.ItemsItem
-import com.test.kerja.frengit.data.response.UserDetail
+import com.test.kerja.frengit.adapter.SectionsPagerAdapter
+import com.test.kerja.frengit.model.ItemsItem
+import com.test.kerja.frengit.model.UserDetail
 import com.test.kerja.frengit.databinding.ActivityDetailUserBinding
+import com.test.kerja.frengit.viewmodel.DetailMainViewModel
 
 class DetailUserActivity : AppCompatActivity() {
 
@@ -43,8 +45,7 @@ class DetailUserActivity : AppCompatActivity() {
         setTabNViewpager()
     }
     private fun setTabNViewpager(){
-        val sectionsPagerAdapter = SectionsPagerAdapter(this)
-        binding.viewPager.adapter = sectionsPagerAdapter
+        binding.viewPager.adapter = SectionsPagerAdapter(this)
         TabLayoutMediator(binding.tabs, binding.viewPager) { tab, position ->
 //            tab.text = resources.getString(TAB_TITLES[position])
             tab.text = resources.getString(TAB_TITLES[position])
@@ -63,10 +64,10 @@ class DetailUserActivity : AppCompatActivity() {
         Glide.with(this)
             .load(receive.avatar_url)
             .into(binding.ivImagedetail)
-        receive.login?.let { detailMainViewModel.findDetailGitUser(it) }
-        receive.login?.let { detailMainViewModel.findDetailFollowerGitUser(it) }
+        detailMainViewModel.findDetailGitUser(receive.login)
+        detailMainViewModel.findDetailFollowerGitUser(receive.login)
     }
-    private fun setDetailUserData(receive:UserDetail){
+    private fun setDetailUserData(receive: UserDetail){
         binding.usernameDetailTv.text = "${receive.name}"
         binding.locationDetailTv.text = "location ${receive.location} follower ${receive.followers}"
         binding.companyDetailTv.text = "company ${receive.company}  following ${receive.following}"

@@ -1,5 +1,6 @@
-package com.test.kerja.frengit.data.retrofit
+package com.test.kerja.frengit.repository
 
+import com.test.kerja.frengit.service.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
